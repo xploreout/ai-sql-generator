@@ -1,19 +1,15 @@
-# Getting Started with Create React App
+# ReactJS app that create SQL using OpenAI API
 
 This project was created with `npx create-react-app sql-ai-gen --template typescript` and tailwind CSS.
 
-It uses openAI API to request generation of SQL statements. User can write the request in the input field and press `Run Query`. The AI generated statements will be displayed along with the history of all requests.
+It uses openAI API to generate SQL statements. User write the request in the input field. `Run Query` will fetch API request to backend that access OpenAI API. The AI generated statements will be displayed along with the history of all prior requests as reference.
 
 Backend server uses Node/Express to access OpenAI api and protect secret using dotenv.
 
-## Available Scripts
-
 ![dashboard](public/sample.jpg)
 
-In the project directory, you can run:
+### `npm run start-frontend` to start the frontend UI
 
-### `npm run start-frontend`
+### `npm run start-backend` to start the backend server
 
-### `npm run start-backend`
-
-### `npm run build`
+### `npm run build` to build and deploy
