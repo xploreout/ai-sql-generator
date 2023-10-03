@@ -1,4 +1,9 @@
-const ResultDisplay = () => {
+import React from 'react'
+
+interface ResultProps {
+  text: string
+}
+const ResultDisplay = ({ text }: ResultProps) => {
   return (
     <div className='result-display'>
       Result Display
@@ -8,7 +13,7 @@ const ResultDisplay = () => {
         <div className='button last'></div>
       </div>
       <div className='result'>
-        <p> </p>
+        <p>{text} </p>
       </div>
     </div>
   )
