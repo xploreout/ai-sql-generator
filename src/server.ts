@@ -2,17 +2,18 @@ import express, { Application, Request, Response } from 'express'
 import cors from 'cors'
 //npm i --save-dev @types/cors
 import OpenAI from 'openai'
-import dotenv from 'dotenv'
+import * as dotenv from 'dotenv'
+dotenv.config({ path: 'src/.env' })
 
 const app: Application = express()
-// app.engine('pug', require('pug').__express)
 app.use(cors())
 app.use(express.json())
-dotenv.config()
 
 const PORT: number = 8000
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY
+
 const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY,
+  apiKey: OPENAI_API_KEY,
 })
 
 app.post('/completions', async (req: Request, res: Response) => {
@@ -26,7 +27,6 @@ app.post('/completions', async (req: Request, res: Response) => {
         },
       ],
     })
-    console.log(chatCompletion.choices[0].message)
     res.send(chatCompletion.choices[0].message)
   } catch (error) {
     console.error(error)
@@ -34,4 +34,4 @@ app.post('/completions', async (req: Request, res: Response) => {
   }
 })
 
-app.listen(PORT, () => console.log(`Your server is running at ${PORT}`))
+app.listen(PORT, () => console.log(`The server is running at ${PORT}`))
