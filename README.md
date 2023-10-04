@@ -1,4 +1,4 @@
-# ReactJS app that create SQL using OpenAI API
+# ReactJS app to generate SQL using OpenAI API
 
 This project was created with `npx create-react-app sql-ai-gen --template typescript` and tailwind CSS.
 
