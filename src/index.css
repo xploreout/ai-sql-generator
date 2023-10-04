@@ -1,17 +1,3 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
-
 * {
   font-family: Verdana, Tahoma, san-serif;
 }
@@ -24,7 +10,6 @@ body {
   align-items: center;
   height: 100vh;
   background-color: rgb(250, 250, 250);
-  /* #fafafa; */
 }
 p,
 input {
@@ -40,7 +25,8 @@ input {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /* //1px for y-axis 4px for blur */
+  /* //on top of each other */
+  /* box-shadow ..1px for y-axis 4px for blur */
 }
 
 .result-display {
@@ -49,7 +35,8 @@ input {
   height: 46%;
   margin: 2%;
   border-radius: 8px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow: scroll;
 }
 .result {
   margin: 20px 30px;
@@ -96,6 +83,7 @@ input {
   background-color: rgb(250, 250, 250);
 }
 
+/* ---these code will allow scoller be presence all the time ---*/
 ::webkit-scrollbar ;
  {
   -webkit-appearance: none;
@@ -106,6 +94,7 @@ input {
   background-color: rbg(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 0 1px rbga(255, 255, 255, 0.5);
 }
+/* --- */
 
 p#icon {
   padding: 0 7px;
@@ -122,6 +111,7 @@ input {
   margin: 2%;
   display: flex;
   justify-content: flex-end;
+  /* //buttons on the right end */
 }
 
 .button-container button {
@@ -131,11 +121,13 @@ input {
 }
 button#get-query {
   background-color: rgb(255, 95, 86);
-  border-radius: 10px 0 0 10px;
   height: 30px;
+  border-radius: 10px 0 0 10px;
+  /* //left top btm rounded */
 }
 button#clear-chat {
   background-color: rgb(255, 189, 45);
   border-radius: 0 10px 10px 0;
+  /* //right top btm rounded */
   height: 30px;
 }
