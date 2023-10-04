@@ -69,10 +69,21 @@ input {
   background-color: rgb(38, 201, 64);
 }
 .messages-display {
-  width: 96%;
-  height: 46%;
+  width: 95%;
+  height: 40%;
   margin: 2%;
   overflow-y: scroll;
+  display: flex;
+
+  justify-content: center;
+  padding: 5px;
+}
+.messages-quotes {
+  background-color: lightgray;
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px;
 }
 .message-display {
   display: flex;
@@ -80,7 +91,8 @@ input {
   border-radius: 5px;
   box-sizing: border-box;
   margin: 5px 0;
-  background-color: rgb(250, 250, 250);
+  font-size: 13px;
+  /* background-color: rgb(250, 250, 250); */
 }
 
 /* ---these code will allow scoller be presence all the time ---*/
@@ -99,6 +111,14 @@ input {
 p#icon {
   padding: 0 7px;
 }
+.heading {
+  padding-left: 25px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: ;
+}
 
 input {
   padding: 16px;
@@ -110,8 +130,7 @@ input {
 .btn-container {
   margin: 2%;
   display: flex;
-  justify-content: flex-end;
-  /* //buttons on the right end */
+  justify-content: center;
 }
 
 .button-container button {
@@ -120,14 +139,20 @@ input {
   border: none;
 }
 button#get-query {
-  background-color: rgb(255, 95, 86);
-  height: 30px;
+  /* background-color: rgb(255, 95, 86); */
+  background-color: rgb(38, 201, 20);
+  height: 40px;
   border-radius: 10px 0 0 10px;
+  color: white;
+  border: none;
   /* //left top btm rounded */
 }
 button#clear-chat {
   background-color: rgb(255, 189, 45);
   border-radius: 0 10px 10px 0;
   /* //right top btm rounded */
-  height: 30px;
+  height: 40px;
+  margin-right: 10px;
+  color: white;
+  border: none;
 }

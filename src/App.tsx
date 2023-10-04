@@ -45,7 +45,12 @@ const App = () => {
   return (
     <div className='app'>
       <MessagesDisplay userMessages={filteredInputMessages} />
-      <input value={value} onChange={(e) => setValue(e.target.value)} />
+      
+      <input
+        placeholder='Enter request here to generate SQL statements'
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+      />
       <ResultDisplay text={filteredChatData?.content || ''} />
       <div className='btn-container'>
         <button onClick={getQuery} id='get-query'>

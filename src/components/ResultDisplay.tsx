@@ -6,7 +6,6 @@ interface ResultProps {
 const ResultDisplay = ({ text }: ResultProps) => {
   return (
     <div className='result-display'>
-      Result Display
       <div className='buttons'>
         <div className='button first'></div>
         <div className='button middle'></div>

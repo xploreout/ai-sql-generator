@@ -12,11 +12,16 @@ interface MessagesDisplayProps {
 
 const MessagesDisplay = ({ userMessages }: MessagesDisplayProps) => {
   return (
-    <div className='messages-display'>
-      {userMessages.map((userMessage, _index) => 
-        <MessageDisplay key={_index} message={userMessage}/>
-      )}
-    </div>
+    <>
+      <p className='heading'>SQL fun AI</p>
+      <div className='messages-display'>
+        <div className='messages-quotes'>
+          {userMessages.map((userMessage, _index) => (
+            <MessageDisplay key={_index} message={userMessage} />
+          ))}
+        </div>
+      </div>
+    </>
   )
 }
 export default MessagesDisplay
